@@ -51,12 +51,19 @@ body {
     text-align: center;
     /* display: flex;
     justify-content: center; */
+    position: relative;
 }
 
 #login input {
     border: double 5px yellowgreen;
     border-radius: 10px;
     padding: 1em;
+}
+
+#login form {
+    position: sticky;
+    top: 100px;
+    /* left: 0; */
 }
 
 /* SERVICES */
@@ -94,4 +101,53 @@ body {
     0% { transform: rotate3d(1,1,1,0deg) }
     50% { transform: rotate3d(1,1,1,720deg) }
     100% { transform: rotate3d(1,1,1,360deg) }
+}
+
+/* GRID AREA LAYOUT */
+
+body {
+    display: grid;
+    grid-template-areas:
+    'login  about   about'
+    'login  services services'
+    'footer footer footer';
+}
+
+#login {
+    grid-area: login;
+}
+
+#about {
+    grid-area: about;
+}
+
+#services {
+    grid-area: services;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* BACKGROUND IMAGE */
+
+#background-img {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://www.strikegently.co/cdn/shop/files/trench.jpg?v=1706728722');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: opacity(0.3);
+}
+
+body {
+    /* background-color: purple; */
+}
+
+ul {
+    list-style-type: square;
 }
