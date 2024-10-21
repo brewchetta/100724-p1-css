@@ -1,5 +1,97 @@
+/* CASCADING STYLESHEET */
+
 /* OUR STYLESHEET */
 
-img {
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+* {
+    font-family: "Playwrite GB S", cursive;
+}
+
+/* IMAGES */
+
+#the-img {
     max-width: 300px;
+}
+
+img, .fancy-img {
+    max-width: 500px;
+}
+
+/* NAVBAR */
+
+nav {
+    background: #964;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* display: none; */
+}
+
+nav img {
+    width: 150px;
+}
+
+body {
+    padding-top: 150px;
+}
+
+/* LOGIN */
+
+#login {
+    border: solid black 2px;
+    padding: 5em;
+    background-color: #AF69EE;
+    color: yellow;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+}
+
+#login input {
+    border: double 5px yellowgreen;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+/* SERVICES */
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid red 2px; */
+    justify-content: space-around;
+}
+
+#services div {
+    border: solid black 2px;
+    width: 300px;
+    /* overflow: hidden; */
+    margin: 2em;
+    padding: 1em;
+    transition: background-color 1s ease-in;
+    text-align: center;
+    cursor: pointer;
+}
+
+#services img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+#services div:hover {
+    background-color: #39FF14;
+    animation: rotate-around 5s ease-in;
+}
+
+@keyframes rotate-around {
+    0% { transform: rotate3d(1,1,1,0deg) }
+    50% { transform: rotate3d(1,1,1,720deg) }
+    100% { transform: rotate3d(1,1,1,360deg) }
 }
